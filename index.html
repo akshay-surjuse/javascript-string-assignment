@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    
+	<script type="module">
+        import {capitalize, capitalizeAll, isExist, getOccurrenceCount, wordDensity, getExt, removeWhitespace, 
+                reverseWords, countVowels, isPalindrome, truncateString, maskString, validateEmail} from "./stringManipulation.js";
+			
+        capitalize("i am vilas");
+
+        capitalizeAll("i am vilas");
+
+        let existenceResult = isExist("India is my country", "xyz");
+        console.log(`is "XYZ" present in given string: ` + " => ",existenceResult);
+
+        let occurrenceResult = getOccurrenceCount("I felt happy because I saw the others were happy and because I knew I should feel happy, but I wasn’t really happy", "happy");
+        console.log(`Occurence count of word "happy" in given string: ` + " => " , occurrenceResult);
+
+        let wordDensityOfWord = wordDensity("I felt happy because I saw the others were happy and because I knew I should feel happy, but I wasn’t really happy", "happy");
+        console.log(`Word Density of word "happy" in given string`, wordDensityOfWord);
+
+        let extractionResult = getExt("index.html");
+        console.log(`Extracting file name and file type from "index.html": `, extractionResult);
+
+        let stringWithRemovedWhiteSpace = removeWhitespace("    Hellow World    ");
+        console.log(`Removing whitespace from "    Hellow World     ": `, stringWithRemovedWhiteSpace);
+
+        let reverse = reverseWords("I felt happy because I saw the others were happy and because I knew I should feel happy, but I wasn’t really happy");
+        console.log(`Reversing the given string: `, reverse);
+
+        let vowelCount = countVowels ("Hellow I am Akshay Surjuse");
+        console.log(`Counting vowels inside the given string "Hellow I am Akshay Surjuse": `, vowelCount);
+
+        isPalindrome("Hellow");
+
+        truncateString("India is my country.");
+
+        maskString("1234567890", 6);
+
+        let validationResult = validateEmail("akshay@gmail.com");
+        console.log(`Validating given email: `, validationResult);
+    </script>
+</body>
+</html>
